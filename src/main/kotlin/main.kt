@@ -6,6 +6,8 @@ const val MIR = "MIR"
 
 const val VK_PAY = "VK Pay"
 
+val test = 123
+
 
 fun main() {
     println(calculateComission(currentTransaction = 10000))
