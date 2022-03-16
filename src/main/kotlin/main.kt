@@ -6,7 +6,7 @@ const val MIR = "MIR"
 
 const val VK_PAY = "VK Pay"
 
-val test = 123
+val test = 12
 
 
 fun main() {
