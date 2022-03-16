@@ -2,7 +2,7 @@ const val MASTERCARD = "Mastercard"
 const val MAESTRO = "Maestro"
 
 const val VISA = "Visa"
-const val MIR = "Мир"
+const val MIR = "MIR"
 
 const val VK_PAY = "VK Pay"
 
@@ -27,9 +27,10 @@ fun calculateComission(
             }
         }
         VISA, MIR -> {
+            val minimalCommission = currentTransaction * 0.0075
             when {
-                currentTransaction * 0.0075 < 3500 -> 3500
-                else -> (currentTransaction * 0.0075).toInt()
+                minimalCommission < 3500 -> 3500
+                else -> minimalCommission.toInt()
             }
         }
         VK_PAY -> 0
