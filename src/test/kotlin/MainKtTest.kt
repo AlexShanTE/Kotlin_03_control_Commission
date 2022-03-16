@@ -15,7 +15,7 @@ class MainKtTest {
         val cardName: String = MASTERCARD
         val lastTransaction = 10_000
         val currentTransaction = 100_000
-        val expectedComission = 0
+        val expectedComission = -1
         val actualComission = calculateComission(cardName,lastTransaction,currentTransaction)
         assertEquals(expectedComission,actualComission)
     }
